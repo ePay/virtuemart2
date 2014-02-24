@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="vmpayment" >
+    <name>VMPAYMENT_EPAY</name>
+    <creationDate>November 2011</creationDate>
+    <author>ePay - Michael Korsgaard</author>
+    <authorUrl>http://www.epay.dk</authorUrl>
+    <copyright>Copyright (C) 2011 ePay ApS. All rights reserved.</copyright>
+    <license>http://www.epay.dk/om-epay-betalingssystem/betingelser-for-brugen-af-epay.asp ePay Limited License</license>
+    <version>1.4</version>
+    <description><![CDATA[<a href="http://www.epay.dk" target="_blank">ePay</a>]]>
+    </description>
+    <languages>
+		<language tag="en-GB">en-GB.plg_vmpayment_epay.ini</language>
+		<language tag="da-DK">da-DK.plg_vmpayment_epay.ini</language>
+    </languages>
+    <files>
+	<filename plugin="epay">epay.php</filename>
+    </files>
+    <params addpath="/administrator/components/com_virtuemart/elements">
+		<param type="vmjpluginwarning" />
+		<param type="spacer" default="VMPAYMENT_EPAY_PARAMS" level="level1" />
+		<param type="text" name="epay_merchant"  size="50" label="VMPAYMENT_EPAY_MERCHANT" description="VMPAYMENT_EPAY_MERCHANT_DESC" />
+		<param name="epay_windowstate" type="list" default="1" label="VMPAYMENT_EPAY_WINDOWSTATE" description="VMPAYMENT_EPAY_WINDOWSTATE">
+			<option value="1">Overlay</option>
+			<option value="3">Fullscreen</option>
+		</param>
+		<param name="epay_instantcapture" type="radio" default="0" label="VMPAYMENT_EPAY_INSTANTCAPTURE" description="VMPAYMENT_EPAY_INSTANTCAPTURE_DESC">
+	    	<option value="0">COM_VIRTUEMART_NO</option>
+	    	<option value="1">COM_VIRTUEMART_YES</option>
+		</param>
+		<param name="epay_ownreceipt" type="radio" default="0" label="VMPAYMENT_EPAY_OWNRECEIPT" description="VMPAYMENT_EPAY_OWNRECEIPT_DESC">
+	    	<option value="0">COM_VIRTUEMART_NO</option>
+	    	<option value="1">COM_VIRTUEMART_YES</option>
+		</param>
+		<param type="text" name="epay_group"  size="50" label="VMPAYMENT_EPAY_GROUP" description="VMPAYMENT_EPAY_EPAY_GROUP_DESC" />
+		<param type="text" name="epay_authmail"  size="50" label="VMPAYMENT_EPAY_AUTHMAIL" description="VMPAYMENT_EPAY_EPAY_AUTHMAIL_DESC" />
+		<param type="text" name="epay_authsms"  size="50" label="VMPAYMENT_EPAY_AUTHSMS" description="VMPAYMENT_EPAY_EPAY_AUTHSMS_DESC" />
+		<param type="text" name="epay_md5key"  size="50" label="VMPAYMENT_EPAY_MD5KEY" description="VMPAYMENT_EPAY_MD5KEY" />
+		<param name="status_pending" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_EPAY_STATUS_PENDING" description="VMPAYMENT_EPAY_STATUS_PENDING_EXPLAIN" />
+		<param name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_EPAY_STATUS_SUCCESS" description="VMPAYMENT_EPAY_STATUS_SUCCESS_EXPLAIN" />
+		<param name="status_canceled" type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_EPAY_STATUS_FAILED" description="VMPAYMENT_EPAY_STATUS_FAILED_EXPLAIN" />
+ 	</params>
+
+
+</install>
